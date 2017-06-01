@@ -26,5 +26,8 @@
     <ClInclude Include="opencv_readimage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="random_trials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

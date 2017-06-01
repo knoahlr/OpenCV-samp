@@ -3,12 +3,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
-
-
+#include "random_trials.h"
 
 using namespace cv;
 using namespace std;
-
 
 int main(int argc, const char** argv)
 {
@@ -23,7 +21,8 @@ int main(int argc, const char** argv)
 	}
 	namedWindow("MYWINDOW", CV_WINDOW_AUTOSIZE);
 	imshow("MYWINDOW", img);
-
+	cout << img.type() << endl;
+	cout << CV_MAT_DEPTH_MASK << endl;
 	waitKey(0);
 
 	cvvDestroyWindow("MYWINDOW");
@@ -31,7 +30,7 @@ int main(int argc, const char** argv)
 	cout << size << endl;
 	file1 << size << endl;
 	file1 << img.type() << endl;
-	//file1 << img.at<Vec3b>(16, 15)[0] << endl;
+	//file1 << img.at<>(16, 15) << endl;
 	file1 << endl;
 	file1 << endl;
 	file1 << img << endl;
